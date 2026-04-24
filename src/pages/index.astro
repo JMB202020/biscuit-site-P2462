@@ -19,70 +19,9 @@ const address = "38 Sunnybank Avenue, Heaton Mersey, Stockport SK4 3PR";
 <body>
 
   <!-- Preview Banner -->
-  <div class="bg-[#12283C] text-white text-sm text-center py-2 px-4">
-    Preview redesign for Alfies Pet Services by <a href={`https://biscuitweb.co.uk/activate?id=${id}&name=Alfies%20Pet%20Services`} class="underline font-semibold hover:text-yellow-300">Biscuit Web</a>
-  </div>
+    <div style="background:#B45309;color:white;padding:10px 16px;text-align:center;font-size:14px;position:sticky;top:0;z-index:50"><div style="max-width:56rem;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap"><span>Preview redesign for <strong>Alfies Pet Services</strong></span><a href="https://biscuitweb.co.uk/activate?id=P2462&amp;name=Alfies%20Pet%20Services" style="display:inline-flex;align-items:center;padding:4px 16px;background:white;color:#B45309;font-weight:700;font-size:12px;border-radius:9999px;text-decoration:none">Like it? Just £20/month</a></div></div>
 
-  <!-- Nav -->
-  <header class="bg-[#12283C] text-white sticky top-0 z-50 shadow-lg">
-    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
-      <a href="/P2462" class="font-display font-800 text-xl tracking-tight">🐾 Alfies Pet Services</a>
-      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
-        <a href="/P2462" class="hover:text-yellow-300 transition-colors">Home</a>
-        <a href="/P2462/about-us-html" class="hover:text-yellow-300 transition-colors">About Me</a>
-        <a href="/P2462/dog-walking-html" class="hover:text-yellow-300 transition-colors">Dog Walking</a>
-        <a href="/P2462/doggie-day-care-html" class="hover:text-yellow-300 transition-colors">Doggie Day Care</a>
-        <a href="/P2462/dog-boarding-html" class="hover:text-yellow-300 transition-colors">Dog Boarding</a>
-        <a href="/P2462/charges-html" class="hover:text-yellow-300 transition-colors">Charges</a>
-        <a href="/P2462/contact-us-html" class="bg-yellow-400 text-[#12283C] px-4 py-2 rounded-full hover:bg-yellow-300 transition-colors">Contact Us</a>
-      </nav>
-      <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Open menu">
-        <span class="block w-6 h-0.5 bg-white"></span>
-        <span class="block w-6 h-0.5 bg-white"></span>
-        <span class="block w-6 h-0.5 bg-white"></span>
-      </button>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-[#0E2030] px-4 pb-4 flex flex-col gap-3 text-sm font-semibold">
-      <a href="/P2462" class="block py-2 border-b border-white/10 hover:text-yellow-300">Home</a>
-      <a href="/P2462/about-us-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">About Me</a>
-      <a href="/P2462/dog-walking-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Dog Walking</a>
-      <a href="/P2462/doggie-day-care-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Doggie Day Care</a>
-      <a href="/P2462/dog-boarding-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Dog Boarding</a>
-      <a href="/P2462/charges-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Charges</a>
-      <a href="/P2462/contact-us-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Contact Us</a>
-      <a href="/P2462/customer-page-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Customer Page</a>
-      <a href="/P2462/dogs-needing-a-homelost-dogs---can-you-help-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Dogs Needing a Home</a>
-      <a href="/P2462/terms-and-conditions-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Terms &amp; Conditions</a>
-      <a href="/P2462/blog-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Blog</a>
-      <a href="/P2462/greyhounds-in-need-html" class="block py-2 hover:text-yellow-300">Greyhounds in Need</a>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section class="relative min-h-[560px] flex items-center justify-center overflow-hidden">
-    <img
-      src="/P2462/images/dscf2796-2.jpg"
-      alt="Dogs out on a walk in Stockport"
-      fetchpriority="high"
-      class="absolute inset-0 w-full h-full object-cover"
-    />
-    <div class="absolute inset-0 bg-black/60"></div>
-    <div class="relative z-10 text-center text-white px-4 max-w-3xl mx-auto">
-      <div class="inline-flex items-center gap-2 bg-yellow-400 text-[#12283C] font-semibold text-sm px-4 py-1.5 rounded-full mb-6">
-        📍 Stockport &amp; the 4 Heatons
-      </div>
-      <h1 class="text-4xl md:text-6xl font-800 font-display leading-tight mb-4 text-white">
-        Alfies Pet Services
-      </h1>
-      <p class="text-lg md:text-xl text-white/90 mb-8 max-w-xl mx-auto">
-        Professional, caring dog walking, doggie day care and dog boarding in Stockport. Licensed, insured and CRB checked.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/P2462/contact-us-html" class="bg-yellow-400 text-[#12283C] font-semibold px-8 py-3 rounded-full hover:bg-yellow-300 transition-colors text-lg">Get in Touch</a>
-        <a href="/P2462/charges-html" class="border-2 border-white text-white font-semibold px-8 py-3 rounded-full hover:bg-white hover:text-[#12283C] transition-colors text-lg">View Charges</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
   <!-- Trust Badges -->
   <section class="bg-[#12283C] text-white py-6">
