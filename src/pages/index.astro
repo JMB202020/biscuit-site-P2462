@@ -1,259 +1,425 @@
 ---
 import '../styles/site.css';
-const siteName = "Alfies Pet Services";
-const id = "P2462";
-const phone = "0161 432 8807";
-const mobile = "07902 384948";
-const email = "Alfiespetservices@sky.com";
-const address = "38 Sunnybank Avenue, Heaton Mersey, Stockport SK4 3PR";
+const nav = [
+  { label: 'Home', href: '/P2462' },
+  { label: 'About Me', href: '/P2462/about-us-html' },
+  { label: 'Dog Walking', href: '/P2462/dog-walking-html' },
+  { label: 'Doggie Day Care', href: '/P2462/doggie-day-care-html' },
+  { label: 'Dog Boarding', href: '/P2462/dog-boarding-html' },
+  { label: 'Charges', href: '/P2462/charges-html' },
+  { label: 'Contact', href: '/P2462/contact-us-html' },
+];
+const phone = '0161 432 8807';
+const mobile = '07902 384948';
+const email = 'Alfiespetservices@sky.com';
+const address = '38 Sunnybank Avenue, Heaton Mersey, Stockport SK4 3PR';
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dog Walking | Dog Boarding | Doggie Day Care | Stockport | Alfies Pet Services</title>
-  <meta name="description" content="Alfies Pet Services offer dog walking, dog boarding and doggie daycare in Stockport and the 4 Heatons. Call us on 0161 432 8807." />
-  <link rel="icon" href="/favicon.ico" />
-</head>
-<body>
 
-  <!-- Preview Banner -->
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alfies Pet Services | Dog Walking, Day Care &amp; Boarding in Stockport</title>
+    <meta name="description" content="Professional dog walking, doggie day care and dog boarding in Stockport and the 4 Heatons. Licensed, insured and CRB checked. Call 0161 432 8807." />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="preload" href="/P2462/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/P2462/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  </head>
+  <body>
+
+    <!-- Preview banner -->
     <div style="background:white;color:#374151;padding:8px 16px;text-align:center;font-size:13px;position:sticky;top:0;z-index:50;border-bottom:1px solid #E5E7EB;box-shadow:0 1px 3px rgba(0,0,0,0.05)"><div style="max-width:56rem;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap"><span>Preview redesign for <strong style="color:#111827">Alfies Pet Services</strong></span><a href="https://biscuitweb.co.uk/activate?id=P2462&amp;name=Alfies%20Pet%20Services" style="display:inline-flex;align-items:center;padding:4px 14px;background:#111827;color:white;font-weight:700;font-size:11px;border-radius:9999px;text-decoration:none">Like it? Just £20/month</a></div></div>
 
+    <!-- Header -->
+    <header class="bg-brand-primary-dark text-white sticky top-10 z-40 shadow-md">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+        <a href="/P2462" class="font-display font-extrabold text-xl tracking-tight text-white">🐾 Alfies Pet Services</a>
+        <button
+          id="menu-toggle"
+          class="md:hidden p-2 text-white"
+          aria-label="Open menu"
+          onclick="document.getElementById('mobile-nav').classList.toggle('hidden')"
+        >
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 6h18M3 12h18M3 18h18"/>
+          </svg>
+        </button>
+        <nav class="hidden md:flex items-center gap-5 text-sm">
+          {nav.slice(0, -1).map(n => (
+            <a href={n.href} class={`font-semibold transition-colors ${n.href === '/P2462' ? 'text-brand-accent' : 'text-white/80 hover:text-white'}`}>{n.label}</a>
+          ))}
+          <a href="/P2462/contact-us-html" class="ml-2 inline-flex items-center px-5 py-2 bg-brand-accent text-brand-primary-dark font-display font-extrabold text-sm rounded-full hover:bg-brand-accent-dark transition-colors">
+            Contact
+          </a>
+        </nav>
+      </div>
+      <!-- Mobile nav -->
+      <div id="mobile-nav" class="hidden md:hidden border-t border-white/10 bg-brand-primary-dark px-4 pb-4">
+        {nav.map(n => (
+          <a href={n.href} class="block py-3 text-sm font-semibold text-white/80 hover:text-white border-b border-white/10 last:border-0 transition-colors">{n.label}</a>
+        ))}
+        <a href={`tel:${phone.replace(/\s/g, '')}`} class="mt-3 block text-center px-5 py-3 bg-brand-accent text-brand-primary-dark font-display font-extrabold text-sm rounded-full">
+          📞 {phone}
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero: solid green with emoji mosaic background -->
+    <section class="relative overflow-hidden min-h-[70vh] sm:min-h-[80vh] flex items-center bg-brand-primary">
+      <!-- Emoji tile backdrop -->
+      <div class="absolute inset-0 grid grid-cols-5 sm:grid-cols-8 grid-rows-5 opacity-20 pointer-events-none select-none" aria-hidden="true">
+        {[
+          '🐕','🌿','🐾','🦴','🐶',
+          '🌳','🐕‍🦺','🌻','🐾','🦮',
+          '🏞️','🐩','🌱','🐕','🏡',
+          '🦴','🌿','🐾','🐶','🌳',
+          '🐕','🌻','🦮','🐾','🐕‍🦺',
+        ].map(emoji => (
+          <div class="flex items-center justify-center text-4xl sm:text-5xl">{emoji}</div>
+        ))}
+      </div>
+
+      <div class="relative z-10 text-center text-white px-4 max-w-3xl mx-auto py-16">
+        <div class="inline-flex items-center gap-2 bg-brand-accent text-brand-primary-dark font-display font-extrabold text-sm px-5 py-2 rounded-full mb-6 shadow-sm">
+          📍 Stockport &amp; the 4 Heatons
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-display font-extrabold leading-tight mb-5 text-white">
+          Dog Walking &amp; Pet Care<br class="hidden sm:block" /> You Can Trust
+        </h1>
+        <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
+          Hi, I'm Alfie's Pet Services. I offer friendly, professional dog walking, doggie day care and dog boarding across Stockport and the 4 Heatons. Licensed, insured and CRB checked.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/P2462/contact-us-html" class="bg-brand-accent text-brand-primary-dark font-display font-extrabold px-8 py-3.5 rounded-full hover:bg-brand-accent-dark transition-colors text-base shadow-sm">
+            Get in Touch
+          </a>
+          <a href="/P2462/charges-html" class="border-2 border-white text-white font-display font-extrabold px-8 py-3.5 rounded-full hover:bg-white hover:text-brand-primary transition-colors text-base">
+            View Charges
+          </a>
+        </div>
+      </div>
     </section>
 
-  <!-- Trust Badges -->
-  <section class="bg-[#12283C] text-white py-6">
-    <div class="max-w-4xl mx-auto px-4">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-sm">
-        <div class="flex flex-col items-center gap-1">
-          <span class="text-2xl">🏛️</span>
-          <span class="font-semibold">Council Licensed</span>
-          <span class="text-white/70 text-xs">Stockport Council</span>
-        </div>
-        <div class="flex flex-col items-center gap-1">
-          <span class="text-2xl">🛡️</span>
-          <span class="font-semibold">Fully Insured</span>
-          <span class="text-white/70 text-xs">Peace of mind</span>
-        </div>
-        <div class="flex flex-col items-center gap-1">
-          <span class="text-2xl">✅</span>
-          <span class="font-semibold">CRB Checked</span>
-          <span class="text-white/70 text-xs">Trusted &amp; vetted</span>
-        </div>
-        <div class="flex flex-col items-center gap-1">
-          <span class="text-2xl">📍</span>
-          <span class="font-semibold">Local Service</span>
-          <span class="text-white/70 text-xs">The 4 Heatons</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Overview -->
-  <section class="py-16 px-4 max-w-6xl mx-auto">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-800 font-display text-[#12283C] mb-3">What I Offer</h2>
-      <p class="text-[#0B1824] text-lg max-w-xl mx-auto">Friendly, flexible pet services tailored to you and your dog in the 4 Heatons and surrounding areas.</p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-[#DBDFE2] hover:shadow-md transition-shadow">
-        <div class="aspect-[4/3] overflow-hidden">
-          <img src="/P2462/images/6263212-orig.jpg" alt="Dog walking in Stockport" loading="lazy" width="640" height="480" class="w-full h-full object-cover" />
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-800 font-display text-[#12283C] mb-2">🐕 Dog Walking</h3>
-          <p class="text-[#0B1824] text-sm mb-4">Competitive rates for group or solo walks, tailored to your dog's needs. Currently very limited availability.</p>
-          <div class="flex items-center justify-between">
-            <span class="text-[#12283C] font-semibold text-sm">From £10.00/walk</span>
-            <a href="/P2462/dog-walking-html" class="text-[#12283C] font-semibold text-sm underline hover:text-yellow-600">Learn more</a>
+    <!-- Trust strip -->
+    <section class="bg-brand-primary-dark text-white py-7">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-sm">
+          <div class="flex flex-col items-center gap-1.5">
+            <span class="text-3xl" aria-hidden="true">🏛️</span>
+            <span class="font-display font-extrabold text-sm">Council Licensed</span>
+            <span class="text-white/60 text-xs">Stockport Council</span>
+          </div>
+          <div class="flex flex-col items-center gap-1.5">
+            <span class="text-3xl" aria-hidden="true">🛡️</span>
+            <span class="font-display font-extrabold text-sm">Fully Insured</span>
+            <span class="text-white/60 text-xs">Your peace of mind</span>
+          </div>
+          <div class="flex flex-col items-center gap-1.5">
+            <span class="text-3xl" aria-hidden="true">✅</span>
+            <span class="font-display font-extrabold text-sm">CRB Checked</span>
+            <span class="text-white/60 text-xs">Trusted &amp; vetted</span>
+          </div>
+          <div class="flex flex-col items-center gap-1.5">
+            <span class="text-3xl" aria-hidden="true">❤️</span>
+            <span class="font-display font-extrabold text-sm">Dog Lovers</span>
+            <span class="text-white/60 text-xs">We genuinely care</span>
           </div>
         </div>
       </div>
-      <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-[#DBDFE2] hover:shadow-md transition-shadow">
-        <div class="aspect-[4/3] overflow-hidden">
-          <img src="/P2462/images/5327550-orig.jpg" alt="Doggie day care in Stockport" loading="lazy" width="640" height="480" class="w-full h-full object-cover" />
+    </section>
+
+    <!-- What I Offer -->
+    <section class="py-16 px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-display font-extrabold text-brand-primary-dark mb-3">What I Offer</h2>
+          <p class="text-ink-soft text-lg max-w-xl mx-auto">Flexible, caring pet services tailored to you and your dog across Stockport and the 4 Heatons.</p>
         </div>
-        <div class="p-6">
-          <h3 class="text-xl font-800 font-display text-[#12283C] mb-2">🏠 Doggie Day Care</h3>
-          <p class="text-[#0B1824] text-sm mb-4">For when your dog needs more than a daily walk. Currently very limited availability, please contact us to check.</p>
-          <div class="flex items-center justify-between">
-            <span class="text-[#12283C] font-semibold text-sm">Contact for availability</span>
-            <a href="/P2462/doggie-day-care-html" class="text-[#12283C] font-semibold text-sm underline hover:text-yellow-600">Learn more</a>
+        <div class="grid md:grid-cols-3 gap-6">
+
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-brand-border hover:shadow-md transition-shadow flex flex-col">
+            <div class="bg-brand-primary flex items-center justify-center py-10 text-6xl" aria-hidden="true">🐕</div>
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="text-xl font-display font-extrabold text-brand-primary-dark mb-2">Dog Walking</h3>
+              <p class="text-ink-soft text-sm mb-4 flex-1">Competitive rates for group or solo walks, tailored to your dog's needs and schedule. Currently limited availability.</p>
+              <div class="flex items-center justify-between mt-auto">
+                <span class="font-display font-extrabold text-brand-primary text-base">From £10 / walk</span>
+                <a href="/P2462/dog-walking-html" class="text-brand-primary text-sm font-semibold underline hover:text-brand-primary-dark transition-colors">Learn more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-brand-border hover:shadow-md transition-shadow flex flex-col">
+            <div class="bg-brand-sky flex items-center justify-center py-10 text-6xl" aria-hidden="true">🏠</div>
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="text-xl font-display font-extrabold text-brand-primary-dark mb-2">Doggie Day Care</h3>
+              <p class="text-ink-soft text-sm mb-4 flex-1">When your dog needs more company than a daily walk can give. Limited availability, contact me to check.</p>
+              <div class="flex items-center justify-between mt-auto">
+                <span class="font-display font-extrabold text-brand-primary text-base">Enquire for pricing</span>
+                <a href="/P2462/doggie-day-care-html" class="text-brand-primary text-sm font-semibold underline hover:text-brand-primary-dark transition-colors">Learn more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-brand-border hover:shadow-md transition-shadow flex flex-col">
+            <div class="bg-brand-accent flex items-center justify-center py-10 text-6xl" aria-hidden="true">🛏️</div>
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="text-xl font-display font-extrabold text-brand-primary-dark mb-2">Dog Boarding</h3>
+              <p class="text-ink-soft text-sm mb-4 flex-1">Your dog stays with us as part of the family. Currently only available to existing walking or day care clients.</p>
+              <div class="flex items-center justify-between mt-auto">
+                <span class="font-display font-extrabold text-brand-primary text-base">£23 / night</span>
+                <a href="/P2462/dog-boarding-html" class="text-brand-primary text-sm font-semibold underline hover:text-brand-primary-dark transition-colors">Learn more</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Coverage Area -->
+    <section class="bg-brand-light py-16 px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-display font-extrabold text-brand-primary-dark mb-4">My Coverage Area</h2>
+        <p class="text-ink-soft text-lg mb-10">I cover the 4 Heatons and surrounding parts of Stockport. Get in touch if you're unsure whether I reach you.</p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+          {[
+            { name: 'Heaton Mersey', emoji: '🗺️' },
+            { name: 'Heaton Chapel', emoji: '🗺️' },
+            { name: 'Heaton Moor', emoji: '🗺️' },
+            { name: 'Heaton Norris', emoji: '🗺️' },
+          ].map(loc => (
+            <div class="bg-white rounded-xl p-4 shadow-sm border border-brand-border flex flex-col items-center gap-2">
+              <span class="text-2xl" aria-hidden="true">{loc.emoji}</span>
+              <span class="font-display font-extrabold text-brand-primary-dark text-sm text-center">{loc.name}</span>
+            </div>
+          ))}
+        </div>
+        <p class="text-ink-soft text-sm">
+          Also covering surrounding Stockport areas.
+          <a href="/P2462/contact-us-html" class="text-brand-primary font-semibold underline hover:text-brand-primary-dark ml-1">Check your area</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- About Me -->
+    <section class="py-16 px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-2xl shadow-sm border border-brand-border overflow-hidden">
+          <div class="grid md:grid-cols-2">
+            <div class="bg-brand-primary flex items-center justify-center py-16 px-8 text-center">
+              <div>
+                <div class="text-8xl mb-4" aria-hidden="true">🐾</div>
+                <div class="text-white font-display font-extrabold text-2xl">Alfies Pet Services</div>
+                <div class="text-white/80 text-sm mt-1">Stockport &amp; the 4 Heatons</div>
+              </div>
+            </div>
+            <div class="p-8 flex flex-col justify-center">
+              <h2 class="text-2xl md:text-3xl font-display font-extrabold text-brand-primary-dark mb-4">About Me</h2>
+              <p class="text-ink-soft text-base mb-4 leading-relaxed">
+                I'm a passionate dog lover based in the 4 Heatons, Stockport. I set up Alfies Pet Services to give local dogs the care, exercise and attention they deserve while their owners are at work or away.
+              </p>
+              <p class="text-ink-soft text-base mb-6 leading-relaxed">
+                I'm fully licensed by Stockport Council, insured, and CRB checked. Every dog in my care is treated as part of the family.
+              </p>
+              <a href="/P2462/about-us-html" class="inline-flex items-center gap-2 bg-brand-primary text-white font-display font-extrabold px-6 py-3 rounded-full hover:bg-brand-primary-dark transition-colors text-sm self-start">
+                More About Me
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-[#DBDFE2] hover:shadow-md transition-shadow">
-        <div class="aspect-[4/3] overflow-hidden">
-          <img src="/P2462/images/242637.jpg" alt="Dog boarding in Stockport" loading="lazy" width="250" height="187" class="w-full h-full object-cover" />
+    </section>
+
+    <!-- A Typical Day -->
+    <section class="bg-brand-primary py-16 px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-display font-extrabold text-white mb-4">A Typical Day</h2>
+        <p class="text-white/80 text-lg mb-10">Here's what a normal dog walking day looks like for the dogs in my care.</p>
+        <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-5">
+          {[
+            { time: 'Morning', emoji: '🌅', desc: 'Pick-up from your home. Dogs greet each other and get ready for their adventure.' },
+            { time: 'Walk', emoji: '🏞️', desc: 'A minimum one-hour group or solo walk through local parks and green spaces.' },
+            { time: 'Rest', emoji: '😴', desc: 'Back safe at home. Water, a rest, and plenty of fuss before drop-off.' },
+            { time: 'Drop-off', emoji: '🏡', desc: 'I return your dog, happy and tired, with a quick update on how the walk went.' },
+          ].map(step => (
+            <div class="bg-white/10 border border-white/20 rounded-xl p-5 text-left">
+              <div class="text-3xl mb-3" aria-hidden="true">{step.emoji}</div>
+              <div class="font-display font-extrabold text-white text-base mb-2">{step.time}</div>
+              <p class="text-white/80 text-sm leading-relaxed">{step.desc}</p>
+            </div>
+          ))}
         </div>
-        <div class="p-6">
-          <h3 class="text-xl font-800 font-display text-[#12283C] mb-2">🛏️ Dog Boarding</h3>
-          <p class="text-[#0B1824] text-sm mb-4">Your dog stays with us as part of the family. Currently only available to existing walking or day care clients.</p>
-          <div class="flex items-center justify-between">
-            <span class="text-[#12283C] font-semibold text-sm">£23.00 per night</span>
-            <a href="/P2462/dog-boarding-html" class="text-[#12283C] font-semibold text-sm underline hover:text-yellow-600">Learn more</a>
+      </div>
+    </section>
+
+    <!-- Emoji gallery / dogs grid (no images) -->
+    <section class="py-16 px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl md:text-4xl font-display font-extrabold text-brand-primary-dark mb-3">Happy Dogs in My Care</h2>
+          <p class="text-ink-soft text-lg">Every dog gets individual attention, whether they're part of a group walk or boarding with me.</p>
+        </div>
+        <div class="grid grid-cols-3 md:grid-cols-6 gap-3">
+          {['🐕','🐶','🦮','🐕‍🦺','🐩','🦴','🌿','🐾','🌳','🌻','🏞️','🏡'].map(emoji => (
+            <div class="aspect-square overflow-hidden rounded-xl bg-brand-light flex items-center justify-center text-5xl border border-brand-border">
+              <span aria-hidden="true">{emoji}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="bg-brand-primary-dark text-white py-16 px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-display font-extrabold text-white text-center mb-4">Simple, Clear Charges</h2>
+        <p class="text-white/70 text-center mb-10 text-base">No hidden costs. Collection and drop-off is always included.</p>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+          <div class="bg-white/10 border border-white/20 rounded-2xl p-6 text-center">
+            <div class="text-4xl mb-3" aria-hidden="true">🐕</div>
+            <h3 class="font-display font-extrabold text-white text-lg mb-3">Dog Walking</h3>
+            <div class="text-3xl font-display font-extrabold text-brand-accent mb-1">£10</div>
+            <div class="text-white/60 text-sm mb-3">Group walk (min 1 hour)</div>
+            <div class="text-2xl font-display font-extrabold text-brand-accent mb-1">£13</div>
+            <div class="text-white/60 text-sm">Solo walk (min 1 hour)</div>
+          </div>
+          <div class="bg-white/10 border border-white/20 rounded-2xl p-6 text-center">
+            <div class="text-4xl mb-3" aria-hidden="true">🛏️</div>
+            <h3 class="font-display font-extrabold text-white text-lg mb-3">Dog Boarding</h3>
+            <div class="text-3xl font-display font-extrabold text-brand-accent mb-1">£23</div>
+            <div class="text-white/60 text-sm mb-3">Per 24-hour period</div>
+            <div class="text-white/60 text-sm">Includes minimum 2 walks per day</div>
+          </div>
+          <div class="bg-white/10 border border-white/20 rounded-2xl p-6 text-center">
+            <div class="text-4xl mb-3" aria-hidden="true">🚗</div>
+            <h3 class="font-display font-extrabold text-white text-lg mb-3">Pets to Vets</h3>
+            <div class="text-3xl font-display font-extrabold text-brand-accent mb-1">£7.50</div>
+            <div class="text-white/60 text-sm mb-3">Plus 50p per mile</div>
+            <div class="text-white/60 text-sm">If the vet is more than 5 miles away</div>
           </div>
         </div>
+        <div class="text-center mt-8">
+          <p class="text-white/60 text-sm mb-5">Discounts available for regular bookings. All prices include collection and drop-off.</p>
+          <a href="/P2462/charges-html" class="inline-block bg-brand-accent text-brand-primary-dark font-display font-extrabold px-8 py-3 rounded-full hover:bg-brand-accent-dark transition-colors">
+            Full Charges List
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Coverage Area -->
-  <section class="bg-[#ECEEEF] py-16 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-800 font-display text-[#12283C] mb-4">My Coverage Area</h2>
-      <p class="text-[#0B1824] text-lg mb-8">I serve the 4 Heatons and surrounding areas of Stockport.</p>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="bg-white rounded-xl p-4 shadow-sm border border-[#DBDFE2]">
-          <div class="text-2xl mb-2">🗺️</div>
-          <div class="font-semibold text-[#12283C] text-sm">Heaton Mersey</div>
-        </div>
-        <div class="bg-white rounded-xl p-4 shadow-sm border border-[#DBDFE2]">
-          <div class="text-2xl mb-2">🗺️</div>
-          <div class="font-semibold text-[#12283C] text-sm">Heaton Chapel</div>
-        </div>
-        <div class="bg-white rounded-xl p-4 shadow-sm border border-[#DBDFE2]">
-          <div class="text-2xl mb-2">🗺️</div>
-          <div class="font-semibold text-[#12283C] text-sm">Heaton Moor</div>
-        </div>
-        <div class="bg-white rounded-xl p-4 shadow-sm border border-[#DBDFE2]">
-          <div class="text-2xl mb-2">🗺️</div>
-          <div class="font-semibold text-[#12283C] text-sm">Heaton Norris</div>
+    <!-- Testimonials placeholder -->
+    <section class="py-16 px-4 bg-brand-light">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-display font-extrabold text-brand-primary-dark mb-4">What Dog Owners Say</h2>
+        <p class="text-ink-soft mb-8">Reviews from happy pet owners in Stockport and the 4 Heatons.</p>
+        <div class="grid md:grid-cols-3 gap-6">
+          {[1,2,3].map(() => (
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-brand-border text-left">
+              <div class="text-brand-accent text-xl mb-3">★★★★★</div>
+              <p class="text-ink-soft text-sm italic mb-4">"Testimonials from real customers will appear here once the site is live."</p>
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full bg-brand-light flex items-center justify-center text-xl" aria-hidden="true">🐶</div>
+                <span class="font-display font-extrabold text-brand-primary-dark text-sm">Happy Dog Owner</span>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-      <p class="mt-6 text-[#0B1824] text-sm">Also covering surrounding Stockport areas. <a href="/P2462/contact-us-html" class="text-[#12283C] underline font-semibold">Get in touch</a> to check if I cover your area.</p>
-    </div>
-  </section>
+    </section>
 
-  <!-- Gallery -->
-  <section class="py-16 px-4 max-w-6xl mx-auto">
-    <div class="text-center mb-10">
-      <h2 class="text-3xl md:text-4xl font-800 font-display text-[#12283C] mb-3">Some of My Happy Customers</h2>
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-      <div class="aspect-square overflow-hidden rounded-xl">
-        <img src="/P2462/images/215874-orig.jpg" alt="Happy dog" loading="lazy" width="640" height="480" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
-      </div>
-      <div class="aspect-square overflow-hidden rounded-xl">
-        <img src="/P2462/images/4523039-orig.jpg" alt="Dog on a walk" loading="lazy" width="640" height="480" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
-      </div>
-      <div class="aspect-square overflow-hidden rounded-xl">
-        <img src="/P2462/images/5940847-orig.jpg" alt="Dog enjoying the outdoors" loading="lazy" width="640" height="480" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
-      </div>
-      <div class="aspect-square overflow-hidden rounded-xl">
-        <img src="/P2462/images/100754-orig.jpg" alt="Dog walking in Stockport" loading="lazy" width="640" height="480" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
-      </div>
-      <div class="aspect-square overflow-hidden rounded-xl">
-        <img src="/P2462/images/3481723-orig.jpg" alt="Dog out for a walk" loading="lazy" width="640" height="480" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
-      </div>
-      <div class="aspect-square overflow-hidden rounded-xl">
-        <img src="/P2462/images/5995670-orig.jpg" alt="Happy customers" loading="lazy" width="640" height="480" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing Summary -->
-  <section class="bg-[#12283C] text-white py-16 px-4">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-800 font-display text-center mb-10 text-white">Simple, Clear Charges</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-white/10 rounded-2xl p-6 text-center border border-white/20">
-          <div class="text-3xl mb-3">🐕</div>
-          <h3 class="font-800 font-display text-xl mb-2 text-white">Dog Walking</h3>
-          <div class="text-3xl font-800 text-yellow-400 mb-1">£10</div>
-          <div class="text-white/70 text-sm mb-3">Group walk (min 1 hour)</div>
-          <div class="text-2xl font-800 text-yellow-400 mb-1">£13</div>
-          <div class="text-white/70 text-sm">Single walk (min 1 hour)</div>
-        </div>
-        <div class="bg-white/10 rounded-2xl p-6 text-center border border-white/20">
-          <div class="text-3xl mb-3">🏠</div>
-          <h3 class="font-800 font-display text-xl mb-2 text-white">Dog Boarding</h3>
-          <div class="text-3xl font-800 text-yellow-400 mb-1">£23</div>
-          <div class="text-white/70 text-sm mb-3">Per 24-hour period</div>
-          <div class="text-white/70 text-sm">Includes min 2 walks per day</div>
-        </div>
-        <div class="bg-white/10 rounded-2xl p-6 text-center border border-white/20">
-          <div class="text-3xl mb-3">🚗</div>
-          <h3 class="font-800 font-display text-xl mb-2 text-white">Pets to Vets</h3>
-          <div class="text-3xl font-800 text-yellow-400 mb-1">£7.50</div>
-          <div class="text-white/70 text-sm mb-3">Plus £0.50 per mile</div>
-          <div class="text-white/70 text-sm">If vet is over 5 miles away</div>
+    <!-- CTA -->
+    <section class="py-16 px-4 bg-brand-accent">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-display font-extrabold text-brand-primary-dark mb-4">Ready to Book?</h2>
+        <p class="text-brand-primary-dark/80 text-lg mb-8">Get in touch to discuss your dog's needs and check my current availability.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={`tel:${phone.replace(/\s/g, '')}`} class="bg-brand-primary-dark text-white font-display font-extrabold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity text-base">
+            📞 {phone}
+          </a>
+          <a href="/P2462/contact-us-html" class="bg-white text-brand-primary-dark font-display font-extrabold px-8 py-3.5 rounded-full hover:bg-brand-light transition-colors text-base border-2 border-brand-primary-dark">
+            Send a Message
+          </a>
         </div>
       </div>
-      <div class="text-center mt-8">
-        <p class="text-white/80 text-sm mb-4">Collection and drop off is free. Discounts available for regular dog walks.</p>
-        <a href="/P2462/charges-html" class="inline-block bg-yellow-400 text-[#12283C] font-semibold px-8 py-3 rounded-full hover:bg-yellow-300 transition-colors">View Full Charges</a>
+    </section>
+
+    <!-- Contact form -->
+    <section class="py-16 px-4">
+      <div class="max-w-xl mx-auto">
+        <h2 class="text-2xl font-display font-extrabold text-brand-primary-dark text-center mb-2">Drop Me a Message</h2>
+        <p class="text-ink-soft text-center text-sm mb-8">I'll get back to you as soon as I can.</p>
+        <form action="https://formspree.io/f/mwvaaojq" method="POST" class="bg-white rounded-2xl shadow-sm border border-brand-border p-8 flex flex-col gap-4">
+          <div>
+            <label for="name" class="block text-sm font-semibold text-brand-primary-dark mb-1">Your name</label>
+            <input id="name" name="name" type="text" required class="w-full border border-brand-border rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary" />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-semibold text-brand-primary-dark mb-1">Email address</label>
+            <input id="email" name="email" type="email" required class="w-full border border-brand-border rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary" />
+          </div>
+          <div>
+            <label for="phone" class="block text-sm font-semibold text-brand-primary-dark mb-1">Phone number</label>
+            <input id="phone" name="phone" type="tel" class="w-full border border-brand-border rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary" />
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-semibold text-brand-primary-dark mb-1">Your message</label>
+            <textarea id="message" name="message" rows="4" required class="w-full border border-brand-border rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary resize-none"></textarea>
+          </div>
+          <button type="submit" class="bg-brand-primary text-white font-display font-extrabold px-6 py-3 rounded-full hover:bg-brand-primary-dark transition-colors w-full text-sm">
+            Send Message
+          </button>
+        </form>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section class="py-16 px-4 text-center max-w-2xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-800 font-display text-[#12283C] mb-4">Ready to Book?</h2>
-    <p class="text-[#0B1824] text-lg mb-8">Get in touch to discuss your requirements and find out how I can help you and your dog.</p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="tel:01614328807" class="bg-[#12283C] text-white font-semibold px-8 py-3 rounded-full hover:bg-[#0E2030] transition-colors">📞 0161 432 8807</a>
-      <a href="/P2462/contact-us-html" class="bg-yellow-400 text-[#12283C] font-semibold px-8 py-3 rounded-full hover:bg-yellow-300 transition-colors">Send a Message</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-[#0E2030] text-white py-12 px-4">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
-      <div>
-        <div class="font-display font-800 text-xl mb-3">🐾 Alfies Pet Services</div>
-        <address class="not-italic text-white/70 text-sm leading-relaxed">
-          38 Sunnybank Avenue<br />
-          Heaton Mersey<br />
-          Stockport SK4 3PR
-        </address>
-        <div class="mt-3 text-sm">
-          <a href="tel:01614328807" class="text-yellow-400 hover:text-yellow-300 block">0161 432 8807</a>
-          <a href="tel:07902384948" class="text-yellow-400 hover:text-yellow-300 block">07902 384948</a>
-          <a href="mailto:Alfiespetservices@sky.com" class="text-yellow-400 hover:text-yellow-300 block break-all">Alfiespetservices@sky.com</a>
+    <!-- Footer -->
+    <footer class="bg-brand-primary-dark text-white py-12 px-4">
+      <div class="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div>
+          <div class="font-display font-extrabold text-xl mb-3">🐾 Alfies Pet Services</div>
+          <address class="not-italic text-white/60 text-sm leading-relaxed mb-3">
+            {address}
+          </address>
+          <div class="flex flex-col gap-1.5 text-sm">
+            <a href={`tel:${phone.replace(/\s/g, '')}`} class="text-brand-accent hover:text-brand-accent-dark transition-colors">{phone}</a>
+            <a href={`tel:${mobile.replace(/\s/g, '')}`} class="text-brand-accent hover:text-brand-accent-dark transition-colors">{mobile}</a>
+            <a href={`mailto:${email}`} class="text-brand-accent hover:text-brand-accent-dark transition-colors break-all">{email}</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-display font-extrabold text-xs uppercase tracking-widest text-white/40 mb-3">Services</h4>
+          <ul class="space-y-2 text-sm text-white/70">
+            <li><a href="/P2462/dog-walking-html" class="hover:text-white transition-colors">Dog Walking</a></li>
+            <li><a href="/P2462/doggie-day-care-html" class="hover:text-white transition-colors">Doggie Day Care</a></li>
+            <li><a href="/P2462/dog-boarding-html" class="hover:text-white transition-colors">Dog Boarding</a></li>
+            <li><a href="/P2462/charges-html" class="hover:text-white transition-colors">Charges</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display font-extrabold text-xs uppercase tracking-widest text-white/40 mb-3">Info</h4>
+          <ul class="space-y-2 text-sm text-white/70">
+            <li><a href="/P2462/about-us-html" class="hover:text-white transition-colors">About Me</a></li>
+            <li><a href="/P2462/contact-us-html" class="hover:text-white transition-colors">Contact Us</a></li>
+            <li><a href="/P2462/customer-page-html" class="hover:text-white transition-colors">Customer Page</a></li>
+            <li><a href="/P2462/terms-and-conditions-html" class="hover:text-white transition-colors">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display font-extrabold text-xs uppercase tracking-widest text-white/40 mb-3">More</h4>
+          <ul class="space-y-2 text-sm text-white/70">
+            <li><a href="/P2462/blog-html" class="hover:text-white transition-colors">Blog</a></li>
+            <li><a href="/P2462/dogs-needing-a-homelost-dogs---can-you-help-html" class="hover:text-white transition-colors">Dogs Needing a Home</a></li>
+            <li><a href="/P2462/greyhounds-in-need-html" class="hover:text-white transition-colors">Greyhounds in Need</a></li>
+          </ul>
         </div>
       </div>
-      <div>
-        <h4 class="font-display font-800 text-sm uppercase tracking-wide text-white/50 mb-3">Services</h4>
-        <ul class="space-y-2 text-sm text-white/70">
-          <li><a href="/P2462/dog-walking-html" class="hover:text-white transition-colors">Dog Walking</a></li>
-          <li><a href="/P2462/doggie-day-care-html" class="hover:text-white transition-colors">Doggie Day Care</a></li>
-          <li><a href="/P2462/dog-boarding-html" class="hover:text-white transition-colors">Dog Boarding</a></li>
-          <li><a href="/P2462/charges-html" class="hover:text-white transition-colors">Charges</a></li>
-        </ul>
+      <div class="max-w-6xl mx-auto mt-8 pt-6 border-t border-white/10 text-center text-white/30 text-xs">
+        &copy; {new Date().getFullYear()} Alfies Pet Services. All rights reserved.
+        This is a sample site built by <a href="https://biscuitweb.co.uk" class="underline hover:text-white/60">Biscuit Web</a>.
       </div>
-      <div>
-        <h4 class="font-display font-800 text-sm uppercase tracking-wide text-white/50 mb-3">Info</h4>
-        <ul class="space-y-2 text-sm text-white/70">
-          <li><a href="/P2462/about-us-html" class="hover:text-white transition-colors">About Me</a></li>
-          <li><a href="/P2462/contact-us-html" class="hover:text-white transition-colors">Contact Us</a></li>
-          <li><a href="/P2462/terms-and-conditions-html" class="hover:text-white transition-colors">Terms &amp; Conditions</a></li>
-          <li><a href="/P2462/customer-page-html" class="hover:text-white transition-colors">Customer Page</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-display font-800 text-sm uppercase tracking-wide text-white/50 mb-3">More</h4>
-        <ul class="space-y-2 text-sm text-white/70">
-          <li><a href="/P2462/blog-html" class="hover:text-white transition-colors">Blog</a></li>
-          <li><a href="/P2462/dogs-needing-a-homelost-dogs---can-you-help-html" class="hover:text-white transition-colors">Dogs Needing a Home</a></li>
-          <li><a href="/P2462/greyhounds-in-need-html" class="hover:text-white transition-colors">Greyhounds in Need</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="max-w-6xl mx-auto mt-8 pt-6 border-t border-white/10 text-center text-white/40 text-xs">
-      &copy; {new Date().getFullYear()} Alfies Pet Services. This is a sample site built by <a href="https://biscuitweb.co.uk" class="underline hover:text-white/70">Biscuit Web</a>.
-    </div>
-  </footer>
+    </footer>
 
-  <script>
-    const toggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('mobile-menu');
-    toggle?.addEventListener('click', () => {
-      menu?.classList.toggle('hidden');
-    });
-  </script>
-
-</body>
+  </body>
 </html>

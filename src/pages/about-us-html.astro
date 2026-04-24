@@ -12,9 +12,77 @@ import '../styles/site.css';
 <body>
 
   <!-- Preview Banner -->
-    <div style="background:white;color:#374151;padding:8px 16px;text-align:center;font-size:13px;position:sticky;top:0;z-index:50;border-bottom:1px solid #E5E7EB;box-shadow:0 1px 3px rgba(0,0,0,0.05)"><div style="max-width:56rem;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap"><span>Preview redesign for <strong style="color:#111827">Alfies Pet Services</strong></span><a href="https://biscuitweb.co.uk/activate?id=P2462&amp;name=Alfies%20Pet%20Services" style="display:inline-flex;align-items:center;padding:4px 14px;background:#111827;color:white;font-weight:700;font-size:11px;border-radius:9999px;text-decoration:none">Like it? Just £20/month</a></div></div>
+  <div class="bg-[#12283C] text-white text-sm text-center py-2 px-4">
+    Preview redesign for Alfies Pet Services by <a href="https://biscuitweb.co.uk/activate?id=P2462&name=Alfies%20Pet%20Services" class="underline font-semibold hover:text-yellow-300">Biscuit Web</a>
+  </div>
 
+  <!-- Nav -->
+  <header class="bg-[#12283C] text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
+      <a href="/P2462" class="font-display font-800 text-xl tracking-tight">🐾 Alfies Pet Services</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
+        <a href="/P2462" class="hover:text-yellow-300 transition-colors">Home</a>
+        <a href="/P2462/about-us-html" class="text-yellow-400">About Me</a>
+        <a href="/P2462/dog-walking-html" class="hover:text-yellow-300 transition-colors">Dog Walking</a>
+        <a href="/P2462/doggie-day-care-html" class="hover:text-yellow-300 transition-colors">Doggie Day Care</a>
+        <a href="/P2462/dog-boarding-html" class="hover:text-yellow-300 transition-colors">Dog Boarding</a>
+        <a href="/P2462/charges-html" class="hover:text-yellow-300 transition-colors">Charges</a>
+        <a href="/P2462/contact-us-html" class="bg-yellow-400 text-[#12283C] px-4 py-2 rounded-full hover:bg-yellow-300 transition-colors">Contact Us</a>
+      </nav>
+      <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Open menu">
+        <span class="block w-6 h-0.5 bg-white"></span>
+        <span class="block w-6 h-0.5 bg-white"></span>
+        <span class="block w-6 h-0.5 bg-white"></span>
+      </button>
     </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0E2030] px-4 pb-4 flex flex-col gap-3 text-sm font-semibold">
+      <a href="/P2462" class="block py-2 border-b border-white/10 hover:text-yellow-300">Home</a>
+      <a href="/P2462/about-us-html" class="block py-2 border-b border-white/10 text-yellow-400">About Me</a>
+      <a href="/P2462/dog-walking-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Dog Walking</a>
+      <a href="/P2462/doggie-day-care-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Doggie Day Care</a>
+      <a href="/P2462/dog-boarding-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Dog Boarding</a>
+      <a href="/P2462/charges-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Charges</a>
+      <a href="/P2462/contact-us-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Contact Us</a>
+      <a href="/P2462/customer-page-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Customer Page</a>
+      <a href="/P2462/dogs-needing-a-homelost-dogs---can-you-help-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Dogs Needing a Home</a>
+      <a href="/P2462/terms-and-conditions-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Terms &amp; Conditions</a>
+      <a href="/P2462/blog-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Blog</a>
+      <a href="/P2462/greyhounds-in-need-html" class="block py-2 hover:text-yellow-300">Greyhounds in Need</a>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="relative h-48 md:h-64 flex items-center justify-center overflow-hidden">
+    <img src="/P2462/images/home-7.jpg" alt="Alfies Pet Services" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative z-10 text-center text-white px-4">
+      <h1 class="text-3xl md:text-5xl font-800 font-display text-white">About Me</h1>
+      <p class="text-white/80 mt-2">The friendly face behind Alfies Pet Services</p>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="py-16 px-4 max-w-5xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <img src="/P2462/images/2080147.jpg" alt="Alfie" loading="lazy" width="250" height="187" class="w-full max-w-sm mx-auto rounded-2xl shadow-lg object-cover" />
+      </div>
+      <div>
+        <h2 class="text-2xl md:text-3xl font-800 font-display text-[#12283C] mb-6">About Us</h2>
+        <p class="text-[#0B1824] leading-relaxed mb-4">
+          Alfie's Pet Services is a local, independent pet care service based in Heaton Mersey, Stockport. I offer a friendly, flexible and professional service in and around the 4 Heatons.
+        </p>
+        <p class="text-[#0B1824] leading-relaxed mb-6">
+          I pride myself on offering a service that is tailored to you and your dog's specific needs. Whether you need a regular dog walk, doggie day care, or boarding while you're away, I'm here to help.
+        </p>
+        <div class="space-y-3">
+          <div class="flex items-start gap-3">
+            <span class="text-yellow-500 text-lg mt-0.5">✓</span>
+            <div>
+              <div class="font-semibold text-[#12283C]">Licensed by Stockport Council</div>
+              <div class="text-[#0B1824] text-sm">Fully compliant with local authority regulations</div>
+            </div>
+          </div>
           <div class="flex items-start gap-3">
             <span class="text-yellow-500 text-lg mt-0.5">✓</span>
             <div>

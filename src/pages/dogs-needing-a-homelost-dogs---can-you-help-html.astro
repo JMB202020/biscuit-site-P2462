@@ -12,7 +12,85 @@ import '../styles/site.css';
 <body>
 
   <!-- Preview Banner -->
-    <div style="background:white;color:#374151;padding:8px 16px;text-align:center;font-size:13px;position:sticky;top:0;z-index:50;border-bottom:1px solid #E5E7EB;box-shadow:0 1px 3px rgba(0,0,0,0.05)"><div style="max-width:56rem;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap"><span>Preview redesign for <strong style="color:#111827">Alfies Pet Services</strong></span><a href="https://biscuitweb.co.uk/activate?id=P2462&amp;name=Alfies%20Pet%20Services" style="display:inline-flex;align-items:center;padding:4px 14px;background:#111827;color:white;font-weight:700;font-size:11px;border-radius:9999px;text-decoration:none">Like it? Just £20/month</a></div></div>
+  <div class="bg-[#12283C] text-white text-sm text-center py-2 px-4">
+    Preview redesign for Alfies Pet Services by <a href="https://biscuitweb.co.uk/activate?id=P2462&name=Alfies%20Pet%20Services" class="underline font-semibold hover:text-yellow-300">Biscuit Web</a>
+  </div>
+
+  <!-- Nav -->
+  <header class="bg-[#12283C] text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
+      <a href="/P2462" class="font-display font-800 text-xl tracking-tight">🐾 Alfies Pet Services</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
+        <a href="/P2462" class="hover:text-yellow-300 transition-colors">Home</a>
+        <a href="/P2462/about-us-html" class="hover:text-yellow-300 transition-colors">About Me</a>
+        <a href="/P2462/dog-walking-html" class="hover:text-yellow-300 transition-colors">Dog Walking</a>
+        <a href="/P2462/doggie-day-care-html" class="hover:text-yellow-300 transition-colors">Doggie Day Care</a>
+        <a href="/P2462/dog-boarding-html" class="hover:text-yellow-300 transition-colors">Dog Boarding</a>
+        <a href="/P2462/charges-html" class="hover:text-yellow-300 transition-colors">Charges</a>
+        <a href="/P2462/contact-us-html" class="bg-yellow-400 text-[#12283C] px-4 py-2 rounded-full hover:bg-yellow-300 transition-colors">Contact Us</a>
+      </nav>
+      <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Open menu">
+        <span class="block w-6 h-0.5 bg-white"></span>
+        <span class="block w-6 h-0.5 bg-white"></span>
+        <span class="block w-6 h-0.5 bg-white"></span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0E2030] px-4 pb-4 flex flex-col gap-3 text-sm font-semibold">
+      <a href="/P2462" class="block py-2 border-b border-white/10 hover:text-yellow-300">Home</a>
+      <a href="/P2462/about-us-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">About Me</a>
+      <a href="/P2462/dog-walking-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Dog Walking</a>
+      <a href="/P2462/doggie-day-care-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Doggie Day Care</a>
+      <a href="/P2462/dog-boarding-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Dog Boarding</a>
+      <a href="/P2462/charges-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Charges</a>
+      <a href="/P2462/contact-us-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Contact Us</a>
+      <a href="/P2462/customer-page-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Customer Page</a>
+      <a href="/P2462/dogs-needing-a-homelost-dogs---can-you-help-html" class="block py-2 border-b border-white/10 text-yellow-400">Dogs Needing a Home</a>
+      <a href="/P2462/terms-and-conditions-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Terms &amp; Conditions</a>
+      <a href="/P2462/blog-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Blog</a>
+      <a href="/P2462/greyhounds-in-need-html" class="block py-2 hover:text-yellow-300">Greyhounds in Need</a>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="relative h-48 md:h-64 flex items-center justify-center overflow-hidden">
+    <img src="/P2462/images/home-7.jpg" alt="Dogs needing a home in Stockport" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative z-10 text-center text-white px-4 max-w-2xl mx-auto">
+      <h1 class="text-2xl md:text-4xl font-800 font-display text-white">Dogs Needing a Home / Lost Dogs</h1>
+      <p class="text-white/80 mt-2">Can you help?</p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="py-16 px-4 max-w-4xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-10">
+      <!-- Dogs Needing a Home -->
+      <div>
+        <h2 class="text-2xl font-800 font-display text-[#12283C] mb-4">🏠 Dogs Needing a Home</h2>
+        <p class="text-[#0B1824] leading-relaxed mb-4">
+          Have you lost your pet or are you looking to rehome a pet you can no longer care for? To place a free advert on this website, please email a picture of the pet and full details to:
+        </p>
+        <a href="mailto:Alfiespetservices@sky.com" class="inline-block bg-yellow-400 text-[#12283C] font-semibold px-6 py-2.5 rounded-full hover:bg-yellow-300 transition-colors text-sm mb-6">
+          ✉️ Alfiespetservices@sky.com
+        </a>
+        <p class="text-[#0B1824] text-sm leading-relaxed">
+          Adverts are completely free of charge. Include a photo and full details about the pet.
+        </p>
+      </div>
+
+      <!-- Lost Dogs -->
+      <div>
+        <h2 class="text-2xl font-800 font-display text-[#12283C] mb-4">🔍 Lost Your Dog?</h2>
+        <p class="text-[#0B1824] leading-relaxed mb-4">
+          If your pet is lost, we will keep an eye out during our frequent walks in the 4 Heatons area. We appreciate how stressful and worrying it can be when you lose a pet and we want to help wherever we can.
+        </p>
+        <p class="text-[#0B1824] text-sm mb-3">We also recommend you contact:</p>
+        <ul class="space-y-2 text-sm text-[#0B1824]">
+          <li class="flex items-start gap-2"><span class="text-[#12283C]">•</span> The Stockport Dog Warden Service</li>
+          <li class="flex items-start gap-2"><span class="text-[#12283C]">•</span> Your local police</li>
+        </ul>
+      </div>
+    </div>
 
     <!-- Advice from Manchester Dog Warden -->
     <div class="bg-[#ECEEEF] rounded-2xl p-6 mt-10">

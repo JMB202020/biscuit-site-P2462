@@ -12,9 +12,120 @@ import '../styles/site.css';
 <body>
 
   <!-- Preview Banner -->
-    <div style="background:white;color:#374151;padding:8px 16px;text-align:center;font-size:13px;position:sticky;top:0;z-index:50;border-bottom:1px solid #E5E7EB;box-shadow:0 1px 3px rgba(0,0,0,0.05)"><div style="max-width:56rem;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap"><span>Preview redesign for <strong style="color:#111827">Alfies Pet Services</strong></span><a href="https://biscuitweb.co.uk/activate?id=P2462&amp;name=Alfies%20Pet%20Services" style="display:inline-flex;align-items:center;padding:4px 14px;background:#111827;color:white;font-weight:700;font-size:11px;border-radius:9999px;text-decoration:none">Like it? Just £20/month</a></div></div>
+  <div class="bg-[#12283C] text-white text-sm text-center py-2 px-4">
+    Preview redesign for Alfies Pet Services by <a href="https://biscuitweb.co.uk/activate?id=P2462&name=Alfies%20Pet%20Services" class="underline font-semibold hover:text-yellow-300">Biscuit Web</a>
+  </div>
 
-    </section>
+  <!-- Nav -->
+  <header class="bg-[#12283C] text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
+      <a href="/P2462" class="font-display font-800 text-xl tracking-tight">🐾 Alfies Pet Services</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
+        <a href="/P2462" class="hover:text-yellow-300 transition-colors">Home</a>
+        <a href="/P2462/about-us-html" class="hover:text-yellow-300 transition-colors">About Me</a>
+        <a href="/P2462/dog-walking-html" class="hover:text-yellow-300 transition-colors">Dog Walking</a>
+        <a href="/P2462/doggie-day-care-html" class="hover:text-yellow-300 transition-colors">Doggie Day Care</a>
+        <a href="/P2462/dog-boarding-html" class="text-yellow-400">Dog Boarding</a>
+        <a href="/P2462/charges-html" class="hover:text-yellow-300 transition-colors">Charges</a>
+        <a href="/P2462/contact-us-html" class="bg-yellow-400 text-[#12283C] px-4 py-2 rounded-full hover:bg-yellow-300 transition-colors">Contact Us</a>
+      </nav>
+      <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Open menu">
+        <span class="block w-6 h-0.5 bg-white"></span>
+        <span class="block w-6 h-0.5 bg-white"></span>
+        <span class="block w-6 h-0.5 bg-white"></span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0E2030] px-4 pb-4 flex flex-col gap-3 text-sm font-semibold">
+      <a href="/P2462" class="block py-2 border-b border-white/10 hover:text-yellow-300">Home</a>
+      <a href="/P2462/about-us-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">About Me</a>
+      <a href="/P2462/dog-walking-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Dog Walking</a>
+      <a href="/P2462/doggie-day-care-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Doggie Day Care</a>
+      <a href="/P2462/dog-boarding-html" class="block py-2 border-b border-white/10 text-yellow-400">Dog Boarding</a>
+      <a href="/P2462/charges-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Charges</a>
+      <a href="/P2462/contact-us-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Contact Us</a>
+      <a href="/P2462/customer-page-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Customer Page</a>
+      <a href="/P2462/dogs-needing-a-homelost-dogs---can-you-help-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Dogs Needing a Home</a>
+      <a href="/P2462/terms-and-conditions-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Terms &amp; Conditions</a>
+      <a href="/P2462/blog-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Blog</a>
+      <a href="/P2462/greyhounds-in-need-html" class="block py-2 hover:text-yellow-300">Greyhounds in Need</a>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="relative h-72 md:h-96 flex items-center justify-center overflow-hidden">
+    <img src="/P2462/images/242637.jpg" alt="Dog boarding in Stockport" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative z-10 text-center text-white px-4">
+      <div class="inline-flex items-center gap-2 bg-yellow-400 text-[#12283C] font-semibold text-sm px-4 py-1.5 rounded-full mb-4">
+        📍 Stockport &amp; the 4 Heatons
+      </div>
+      <h1 class="text-3xl md:text-5xl font-800 font-display text-white">Dog Boarding</h1>
+      <p class="text-white/80 mt-3 text-lg max-w-xl mx-auto">Your dog, cared for like one of the family while you are away.</p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="py-16 px-4 max-w-4xl mx-auto">
+    <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-4 mb-8">
+      <p class="text-[#12283C] font-semibold text-sm">
+        ⚠️ Dog boarding is currently only available to existing dog walking or doggie day care clients. New clients must complete the vetting procedure before boarding.
+      </p>
+    </div>
+
+    <h2 class="text-2xl md:text-3xl font-800 font-display text-[#12283C] mb-6">Home Boarding in Stockport</h2>
+    <p class="text-[#0B1824] leading-relaxed mb-4 text-lg">
+      Give Alfie's Pet Services the privilege of looking after your dog while you are away from home. Your dog will become part of the family and will be looked after by an experienced and caring dog owner in their own home.
+    </p>
+    <p class="text-[#0B1824] leading-relaxed mb-4">
+      To arrange a visit to discuss your requirements or for more information, please use the contact form or ring on 0161 432 8807.
+    </p>
+    <p class="text-[#0B1824] leading-relaxed mb-8">
+      Alfie's Pet Services understands that it can be a stressful time when leaving your dog in somebody else's care. To ensure your pet's stay with us is a happy experience, we will only board dogs that are known to us or that have been through our vetting procedure. The vetting procedure involves a meeting with you and your dog, and your dog spending a day with us to ensure he or she will be happy in our care.
+    </p>
+
+    <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#DBDFE2] mb-8">
+      <h3 class="font-800 font-display text-[#12283C] text-xl mb-4">🏷️ Boarding Charges</h3>
+      <div class="text-3xl font-800 text-[#12283C] mb-1">£23.00</div>
+      <div class="text-[#0B1824] text-sm mb-4">Per 24-hour period (or part thereof)</div>
+      <ul class="space-y-2 text-sm text-[#0B1824]">
+        <li class="flex items-start gap-2"><span class="text-yellow-500">✓</span> Includes a minimum of 2 walks per day</li>
+        <li class="flex items-start gap-2"><span class="text-yellow-500">✓</span> Additional walks at owner's request: £5.00 per walk (min 1 hour)</li>
+        <li class="flex items-start gap-2"><span class="text-yellow-500">✓</span> Medication can be continued during the stay, free of charge</li>
+        <li class="flex items-start gap-2"><span class="text-yellow-500">✓</span> Vet visits can be arranged for £7.50 + £0.50 per mile (if over 5 miles from Heaton Mersey)</li>
+      </ul>
+    </div>
+
+    <div class="bg-[#ECEEEF] rounded-2xl p-6 mb-8">
+      <h3 class="font-800 font-display text-[#12283C] text-lg mb-4">Important Information</h3>
+      <ul class="space-y-3 text-sm text-[#0B1824]">
+        <li class="flex items-start gap-2">
+          <span class="text-[#12283C] mt-0.5">•</span>
+          <span>Due to licence conditions, we are unable to accept puppies under 6 months of age for home boarding.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-[#12283C] mt-0.5">•</span>
+          <span>We are unable to accept any dogs registered under the Dangerous Dogs Act 1991 or dog hybrids registered under the Dangerous Wild Animals Act 1976.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-[#12283C] mt-0.5">•</span>
+          <span>Due to our vetting procedure, we are unable to accept dogs unknown to us at short notice.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-[#12283C] mt-0.5">•</span>
+          <span>All dogs must be vaccinated against Distemper, Parvovirus, Hepatitis and Leptospirosis.</span>
+        </li>
+      </ul>
+      <p class="text-sm text-[#0B1824] mt-4">For a copy of the vetting procedure, please use the contact form and we will send you a copy.</p>
+    </div>
+
+    <div class="text-center">
+      <p class="text-[#0B1824] mb-4">Interested in boarding? Get in touch to discuss your requirements.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:01614328807" class="bg-[#12283C] text-white font-semibold px-8 py-3 rounded-full hover:bg-[#0E2030] transition-colors">📞 0161 432 8807</a>
+        <a href="/P2462/contact-us-html" class="bg-yellow-400 text-[#12283C] font-semibold px-8 py-3 rounded-full hover:bg-yellow-300 transition-colors">Send a Message</a>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="bg-[#0E2030] text-white py-12 px-4">

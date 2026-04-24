@@ -12,7 +12,125 @@ import '../styles/site.css';
 <body>
 
   <!-- Preview Banner -->
-    <div style="background:white;color:#374151;padding:8px 16px;text-align:center;font-size:13px;position:sticky;top:0;z-index:50;border-bottom:1px solid #E5E7EB;box-shadow:0 1px 3px rgba(0,0,0,0.05)"><div style="max-width:56rem;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap"><span>Preview redesign for <strong style="color:#111827">Alfies Pet Services</strong></span><a href="https://biscuitweb.co.uk/activate?id=P2462&amp;name=Alfies%20Pet%20Services" style="display:inline-flex;align-items:center;padding:4px 14px;background:#111827;color:white;font-weight:700;font-size:11px;border-radius:9999px;text-decoration:none">Like it? Just £20/month</a></div></div>
+  <div class="bg-[#12283C] text-white text-sm text-center py-2 px-4">
+    Preview redesign for Alfies Pet Services by <a href="https://biscuitweb.co.uk/activate?id=P2462&name=Alfies%20Pet%20Services" class="underline font-semibold hover:text-yellow-300">Biscuit Web</a>
+  </div>
+
+  <!-- Nav -->
+  <header class="bg-[#12283C] text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
+      <a href="/P2462" class="font-display font-800 text-xl tracking-tight">🐾 Alfies Pet Services</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
+        <a href="/P2462" class="hover:text-yellow-300 transition-colors">Home</a>
+        <a href="/P2462/about-us-html" class="hover:text-yellow-300 transition-colors">About Me</a>
+        <a href="/P2462/dog-walking-html" class="hover:text-yellow-300 transition-colors">Dog Walking</a>
+        <a href="/P2462/doggie-day-care-html" class="hover:text-yellow-300 transition-colors">Doggie Day Care</a>
+        <a href="/P2462/dog-boarding-html" class="hover:text-yellow-300 transition-colors">Dog Boarding</a>
+        <a href="/P2462/charges-html" class="hover:text-yellow-300 transition-colors">Charges</a>
+        <a href="/P2462/contact-us-html" class="bg-yellow-400 text-[#12283C] px-4 py-2 rounded-full hover:bg-yellow-300 transition-colors">Contact Us</a>
+      </nav>
+      <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Open menu">
+        <span class="block w-6 h-0.5 bg-white"></span>
+        <span class="block w-6 h-0.5 bg-white"></span>
+        <span class="block w-6 h-0.5 bg-white"></span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0E2030] px-4 pb-4 flex flex-col gap-3 text-sm font-semibold">
+      <a href="/P2462" class="block py-2 border-b border-white/10 hover:text-yellow-300">Home</a>
+      <a href="/P2462/about-us-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">About Me</a>
+      <a href="/P2462/dog-walking-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Dog Walking</a>
+      <a href="/P2462/doggie-day-care-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Doggie Day Care</a>
+      <a href="/P2462/dog-boarding-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Dog Boarding</a>
+      <a href="/P2462/charges-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Charges</a>
+      <a href="/P2462/contact-us-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Contact Us</a>
+      <a href="/P2462/customer-page-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Customer Page</a>
+      <a href="/P2462/dogs-needing-a-homelost-dogs---can-you-help-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Dogs Needing a Home</a>
+      <a href="/P2462/terms-and-conditions-html" class="block py-2 border-b border-white/10 text-yellow-400">Terms &amp; Conditions</a>
+      <a href="/P2462/blog-html" class="block py-2 border-b border-white/10 hover:text-yellow-300">Blog</a>
+      <a href="/P2462/greyhounds-in-need-html" class="block py-2 hover:text-yellow-300">Greyhounds in Need</a>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="relative h-48 md:h-64 flex items-center justify-center overflow-hidden">
+    <img src="/P2462/images/home-7.jpg" alt="Terms and Conditions" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative z-10 text-center text-white px-4">
+      <h1 class="text-3xl md:text-5xl font-800 font-display text-white">Terms and Conditions</h1>
+      <p class="text-white/80 mt-2">Alfie's Pet Services</p>
+    </div>
+  </section>
+
+  <!-- T&C Content -->
+  <section class="py-16 px-4 max-w-3xl mx-auto">
+    <div class="space-y-8">
+
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#DBDFE2]">
+        <h2 class="text-xl font-800 font-display text-[#12283C] mb-4">Vaccination Policy</h2>
+        <p class="text-sm text-[#0B1824] leading-relaxed">
+          ALL DOGS must be VACCINATED at all times against Distemper, Parvovirus, Hepatitis and Leptospirosis.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#DBDFE2]">
+        <h2 class="text-xl font-800 font-display text-[#12283C] mb-4">Charges</h2>
+        <ul class="space-y-3 text-sm text-[#0B1824]">
+          <li>Boarding fees are charged on a 24-hour basis or part thereof. The current charge for any given 24-hour period is <strong>£23.00</strong>.</li>
+          <li>Boarding fee includes a minimum of 2 walks per day. Additional walks may be given at the discretion of Alfie's Pet Services at no extra charge.</li>
+          <li>Additional walks as requested by the owner will be charged at <strong>£5.00</strong> per additional walk (walk duration minimum of 1 hour).</li>
+          <li>Dog walking fees: Minimum 1-hour group walk <strong>£10.00</strong>; minimum 1-hour single walk <strong>£13.00</strong>. Longer or shorter walks are available upon request.</li>
+          <li>Collection and drop off of your dog is free of charge and is not included in the minimum dog walk time quoted above.</li>
+          <li>Discounts are available for regular dog walks.</li>
+          <li>Puppies are accepted at no extra charge to the above rates.</li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#DBDFE2]">
+        <h2 class="text-xl font-800 font-display text-[#12283C] mb-4">Payment</h2>
+        <ul class="space-y-3 text-sm text-[#0B1824]">
+          <li>All accounts are to be settled by cash or credit card via PayPal on or before the day the dog leaves the accommodation.</li>
+          <li>Alfie's Pet Services is not registered for VAT and as such VAT is not charged and VAT receipts cannot be provided.</li>
+          <li>Medication prescribed for your pet can in most cases be continued whilst boarding, free of charge. It is the owner's responsibility to ensure the correct medication is provided and clear and concise instructions are given regarding the treatment required.</li>
+          <li>If your dog requires a scheduled visit to the vets for treatment during his or her stay with Alfie's Pet Services, this can be arranged for a fee of <strong>£7.50 + £0.50 per mile</strong>. Mileage fee only applies if your vet is over 5 miles from Heaton Mersey.</li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#DBDFE2]">
+        <h2 class="text-xl font-800 font-display text-[#12283C] mb-4">Overstays</h2>
+        <p class="text-sm text-[#0B1824] leading-relaxed mb-3">
+          If there is a delay in picking up your pet it would be appreciated if you could advise of the delay as soon as it becomes apparent that you will be delayed. Alfie's Pet Services shall take all reasonable steps to contact the owner of any pets that are not collected within 2 days of the scheduled end of their stay.
+        </p>
+        <p class="text-sm text-[#0B1824] leading-relaxed">
+          However, if the owner cannot be contacted within 14 days of its scheduled departure date, the animal will be sold or other action taken at Alfie's Pet Services' discretion. All monies owing, including fees and costs relating to removal, shall be payable by the owner forthwith after receipt of Alfie's Pet Services' advice as to the amount thereof. If the costs are not paid as provided above, legal proceedings will be instigated without further notice.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#DBDFE2]">
+        <h2 class="text-xl font-800 font-display text-[#12283C] mb-4">Limit of Liability</h2>
+        <p class="text-sm text-[#0B1824] leading-relaxed mb-4">
+          Whilst your pet is in our care, or in transit or elsewhere, we are your representatives in all matters relating to your pet. Whilst acting as your representative our assurances to you are:
+        </p>
+        <ol class="space-y-2 text-sm text-[#0B1824] list-decimal list-inside mb-4">
+          <li>All our intentions and endeavours will be towards the very best interests of your pet.</li>
+          <li>We will be taking all practicable and reasonable precautions and actions to safeguard and promote the health and well-being of your pet.</li>
+        </ol>
+        <p class="text-sm text-[#0B1824] leading-relaxed mb-4">
+          As an act of goodwill, in certain instances (but not for conditions which were present or incubating upon arrival, secondary to an underlying health problem, or against which a vaccine is available), and entirely at our own discretion:
+        </p>
+        <ul class="space-y-2 text-sm text-[#0B1824] mb-4">
+          <li class="flex items-start gap-2"><span>(a)</span> Waive charge to a maximum of £100 per pet for veterinary treatment incurred on your behalf.</li>
+          <li class="flex items-start gap-2"><span>(b)</span> Pay yourself to a maximum of £100 per pet for expenditure incurred for veterinary treatment given to your pet after leaving Alfie's Pet Services, commenced within 72 hours of having left.</li>
+        </ul>
+        <p class="text-sm text-[#0B1824] leading-relaxed font-semibold mb-2">Your assurances to us as your representative are:</p>
+        <ol class="space-y-2 text-sm text-[#0B1824] list-decimal list-inside">
+          <li>There is no obligation on our part to be responsible for any liability or claim in connection with your pet and that you understand your pet is left in our care entirely at your own risk.</li>
+          <li>We are not in any way to be held responsible for any item(s) you may have left on our premises.</li>
+          <li>Without prejudice to our assurances to you, we have your unequivocal permission to act in loco parentis in all aspects of your pet(s)' care.</li>
+          <li>You undertake to reimburse Alfie's Pet Services for the full cost of everything, including all veterinary treatment, invoiced to ourselves on behalf of your pet whilst in our care.</li>
+        </ol>
+      </div>
+
+    </div>
 
     <div class="mt-10 text-center">
       <p class="text-[#0B1824] text-sm mb-4">Questions about our terms? Get in touch.</p>
